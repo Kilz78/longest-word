@@ -2,6 +2,7 @@
 # pylint: disable=too-few-public-methods
 import string
 import random
+import requests
 
 class Game:
     """Form a complex number."""
@@ -16,4 +17,6 @@ class Game:
             return False
         for i in word:
             test = i in self.grid
-        return test
+        requete = requests.get(f'https://wagon-dictionary.herokuapp.com/{word}')
+        return requete.json()['found']
+
