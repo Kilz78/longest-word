@@ -22,7 +22,3 @@ class Game:
         if test and found is True:
             return True
         return False
-<<<<<<< HEAD
-=======
-
->>>>>>> 6c84526754e02f0d613457d7454cf842fb63eaf3
