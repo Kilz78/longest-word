@@ -18,5 +18,8 @@ class Game:
         for i in word:
             test = i in self.grid
         requete = requests.get(f'https://wagon-dictionary.herokuapp.com/{word}')
-        return requete.json()['found']
+        found = requete.json()['found']
+        if test and found is True:
+            return True
+        return False
 
